@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tovala">
+<head>
+    <meta charset="UTF-8">
+    <title>Tovala</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+
+    <script src="jscolor.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+</head>
+<body ng-controller="TovalaController">
+<div class="container-fluid">
+
+    <h1 class="well">Tovala - Single Page JavaScript Application</h1>
+    <div class="controls">
+
+        <button type="button" class="btn btn-default" ng-click="addRect()">Add New Rectangle</button>
+        <button id="delRect" type="button" class="btn btn-default">Delete Selected Rectangle</button>
+        <input class="jscolor btn btn-default" onchange="changeColorObjects(this.jscolor)" value="cc66ff">
+        <button type="button" class="btn btn-default" ng-click="saveJSON()">Save Layout</button>
+        <div class="row">
+            <label class="btn">Open Saved Layout ::</label>
+            <select ng-change="loadLayouts1(leader)" ng-model="leader">
+                <option ng-repeat="i in savedLayouts" value="{{i.username}}"> {{i.username}}</option>
+            </select>
+            <select ng-show="leader" ng-change="loadLayout(leaderName)" ng-model="leaderName">
+                <option ng-repeat="i in Lname" value="{{i.name}}"> {{i.name}}</option>
+            </select>
+            <button id="delete" type="button" class="btn btn-default" ng-show="leader"
+                    ng-click="deleteLayout(leaderName,leader)">Delete Layout
+            </button>
+        </div>
+    </div>
+
+
+    <canvas id="myCanvas" width="900" height="500">
+        <p>This is fallback content for users of assistive technologies or of browsers that don't have full support for
+            the Canvas API.</p>
+    </canvas>
+
+    <button id="closeall" type="button" class="btn btn-default">Clear Layout</button>
+    <button id="closeall1" type="button" class="btn btn-default" onclick="cleanstore()">Clear storage</button>
+</div>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+        crossorigin="anonymous"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.7.17/fabric.min.js"></script>
+
+<script src="app.js"></script>
+</body>
+</html>

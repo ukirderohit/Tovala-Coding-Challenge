@@ -1,0 +1,54 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Clearfix */
+
+.clearfix:before,
+.clearfix:after {
+    content: ' ';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+}
+
+body {
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px 0 0;
+}
+
+canvas {
+    display: block;
+}
+
+/**/
+.container-fluid {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+canvas {
+    /*margin: 10px 0;*/
+    /*margin: 2em auto;*/
+    max-width: 100%;
+    outline: 2px solid #444;
+}
+
+#closeall {
+    margin: 40px 0;
+}
