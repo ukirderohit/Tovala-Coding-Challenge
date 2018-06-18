@@ -1,6 +1,6 @@
 # Tovala Coding Challenge
 
-## [Demo](http://ukirderohit.me/Tovala-Coding-Challenge/)
+## [Demo](https://ukirderohit.com/Tovala-Coding-Challenge/)
 
 ### Here is the requested feature set:
 - Add a new rectangle to the area
